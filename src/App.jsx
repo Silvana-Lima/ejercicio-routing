@@ -2,8 +2,12 @@ import { useEffect, useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 
 import { AppLayout } from './layout/AppLayout'
+import { AppLayoutBlog } from './layout/AppLoyoutBlog'
+import { Blogs } from './pages/Blogs'
 import { Details } from './pages/Details'
+import { DetailsBlog } from './pages/DetailsBlog'
 import { EditTask } from './pages/EditTaks'
+import { NuevaPublicacion } from './pages/NuevaPublicacion'
 import { Tasks } from './pages/Tasks'
 
 function App() {
@@ -17,14 +21,23 @@ function App() {
 
   return (
     <>
-      <AppLayout>
+      {/* <AppLayout>
         <Routes>
           <Route path="/" element={<Tasks data={data} />} />
           <Route path="/detalles/:id" element={<Details data={data} />} />
           <Route path="/editar/:id" element={<EditTask data={data} />} />
           <Route path="*" element={<h4>ERROR</h4>} />
         </Routes>
-      </AppLayout>
+      </AppLayout> */}
+
+      <AppLayoutBlog>
+        <Routes>
+          <Route path="/" element={<Blogs />} />
+          <Route path="/detalles/:id" element={<DetailsBlog />} />
+          <Route path="/nueva-publicacion" element={<NuevaPublicacion />} />
+          <Route path="*" element={<h4>ERROR</h4>} />
+        </Routes>
+      </AppLayoutBlog>
     </>
   )
 }
