@@ -10,7 +10,7 @@ import {
 } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 
-import { arrayBlogs } from '../utils/ArrayBlog'
+import { arrayBlogs } from '../utils/arrayBlog'
 
 export const Blogs = () => {
   return (

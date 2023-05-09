@@ -11,7 +11,7 @@ import {
 } from '@chakra-ui/react'
 import { Link, useParams } from 'react-router-dom'
 
-import { arrayBlogs } from '../utils/ArrayBlog'
+import { arrayBlogs } from '../utils/arrayBlog'
 
 export const DetailsBlog = () => {
   const { id } = useParams()
